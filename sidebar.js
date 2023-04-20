@@ -365,12 +365,7 @@ let VerticalTabsReloaded = class VerticalTabsReloaded
                     const fac = new FastAverageColor();
                     fac.getColorAsync(imgEl, (color) =>
                     {
-                        if(color.isDark)
-                        {
-                            imgEl.classList.remove("tab-icon-image-light");
-                            imgEl.classList.add("tab-icon-image-dark");
-                        }
-                        else
+                        // kisaragi: I don't like to invert.
                         {
                             imgEl.classList.remove("tab-icon-image-dark");
                             imgEl.classList.add("tab-icon-image-light");
